@@ -24,3 +24,32 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+@import "~leaflet/dist/leaflet.css";
+
+@font-face {
+  font-family: 'opensans-light';
+  font-style: normal;
+  font-weight: normal;
+  src: url('src/assets/open-sans/OpenSans-Light.ttf');
+}
+
+
+@font-face {
+  font-family: 'opensans-light-bold';
+  font-style: normal;
+  font-weight: bold;
+  src: url('src/assets/open-sans/OpenSans-Semibold.ttf');
+}
+
+
+body{
+  --ion-font-family: 'opensans-light';
+}
+
+/*.my-custom-modal-css .modal-wrapper {
+  height: 70%;
+  top: 30%;
+  position: absolute;
+  display: block;
+}*/

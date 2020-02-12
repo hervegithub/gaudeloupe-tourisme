@@ -1,9 +1,58 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
     <ion-title>place-description</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+    <ion-slides pager="true"  [options]="slideOpts">
+      <ion-slide>
+        <ion-card>
+          <img src="../../assets/396_photo_1.jpg">
+        </ion-card>
+      </ion-slide>
+      <ion-slide>
+        <ion-card text-left>
+          <img src="../../assets/396_photo_1.jpg">
+        </ion-card>
+      </ion-slide>
+      <ion-slide>
+        <ion-card text-left>
+          <img src="../../assets/396_photo_1.jpg">
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
+    <div>
+      <ion-item lines="none">
+        <div slot="start" text-center>
+          <ion-icon src="../../assets/heart-sharp.svg" color="primary"></ion-icon><br>
+          <span>11 likes</span>
+        </div>
+        <div text-center>
+          <ion-icon src="../../assets/walk-sharp.svg" color="primary"></ion-icon><br>
+          <span>45 visites</span>
+        </div>
+        <div text-center style="margin-left: 43px;">
+          <ion-icon src="../../assets/call-sharp.svg" color="primary"></ion-icon><br>
+          <span>Infos</span>
+        </div>
+        <div text-center slot="end" (click)="chowMap()">
+          <ion-icon src="../../assets/map-sharp.svg" color="primary"></ion-icon><br>
+          <span>map</span>
+        </div>
+      </ion-item>
+      <hr>
+      <p class="category-group">Rivière La Lézarde</p>
+      <p>RIVIÈRES - PETIT-BOURG</p>
+      <div style="margin-left: 10px; margin-right: 10px;">
+        Cum abaculus accelerare, omnes valebates gratia pius, ferox burguses. Cum abaculus accelerare, omnes valebates gratia pius, ferox burguses.
+        Cum abaculus accelerare, omnes valebates gratia pius, ferox burguses.
+      </div>
+      <div style="margin-left: 10px; margin-right: 10px; margin-top: 20px" *ngIf="isMap">
+        <img src="../../assets/map.png">
+      </div>
+    </div>
 </ion-content>

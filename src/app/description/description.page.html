@@ -1,9 +1,53 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>description</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-button (click)="likePlace()" slot="end" fill="clear" class="ion-button-icon">
+      <ion-icon [color]="iconColor" slot="icon-only" name="heart-empty" style="font-size: 2.3em;" ></ion-icon>
+    </ion-button>
   </ion-toolbar>
+
 </ion-header>
 
 <ion-content>
+  <div class="ion-padding">
+    <h3>Saut de la Lézarde</h3>
+    <p>CHUTES - PETIT-BOURG</p>
+  </div>
+  <div>
+    <ion-slides [options]="slideOpts">
+      <ion-slide>
+        <ion-card>
+          <img src="../../assets/396_photo_1.jpg">
+        </ion-card>
+      </ion-slide>
+      <ion-slide>
+        <ion-card>
+          <img src="../../assets/396_photo_1.jpg">
+        </ion-card>
+      </ion-slide>
 
+      <ion-slide>
+        <ion-card>
+          <img src="../../assets/396_photo_1.jpg">
+        </ion-card>
+      </ion-slide>
+
+      <ion-slide>
+        <ion-card>
+          <img src="../../assets/396_photo_1.jpg">
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
+  </div>
+  <div class="ion-padding">
+    <p style="color:black;font-weight: bold;">Description</p>
+    <p text-justify>{{texte}} <a>Voir plus</a></p>
+  </div>
+  <div class="ion-padding">
+    <img src="../../assets/map.png" alt="">
+  </div>
+  <ion-button expand="block" size="medium" color="dark" size="large">Se renseigner</ion-button>
 </ion-content>

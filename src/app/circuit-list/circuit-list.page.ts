@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-circuit-list',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CircuitListPage implements OnInit {
 
-  constructor() { }
+  map: any;
 
-  ngOnInit() {
+  constructor( private route: Router) { }
+
+  onDescription() {
+    this.route.navigateByUrl('map');
   }
+
+  ngOnInit(): void {
+  }
+
 
 }

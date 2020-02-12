@@ -7,7 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlaceDescriptionPage implements OnInit {
 
+  isMap = false;
+
+  slideOpts = {
+    slidesPerView: 1,
+    initialSlide: 0,
+  };
+
   constructor() { }
+
+  chowMap() {
+    if (this.isMap) {
+      this.isMap = false;
+    }else {
+      this.isMap = true;
+    }
+  }
 
   ngOnInit() {
   }

@@ -8,45 +8,51 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'tab1',
+        path: 'favorites',
         children: [
           {
             path: '',
-            loadChildren: () =>
-              import('../tab1/tab1.module').then(m => m.Tab1PageModule)
+            loadChildren: () => import('../favorites/favorites.module').then( m => m.FavoritesPageModule)
           }
         ]
       },
       {
-        path: 'tab2',
+        path: 'activities',
         children: [
           {
             path: '',
-            loadChildren: () =>
-              import('../tab2/tab2.module').then(m => m.Tab2PageModule)
+            loadChildren: () => import('../activities/activities.module').then( m => m.ActivitiesPageModule)
           }
         ]
       },
       {
-        path: 'tab3',
+        path: 'likes',
         children: [
           {
             path: '',
-            loadChildren: () =>
-              import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+            loadChildren: () => import('../likes/likes.module').then( m => m.LikesPageModule)
+          }
+        ]
+      },
+      {
+        path: 'parametres',
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('../parametres/parametres.module').then( m => m.ParametresPageModule)
           }
         ]
       },
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/tabs/favorites',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/tabs/favorites',
     pathMatch: 'full'
   }
 ];

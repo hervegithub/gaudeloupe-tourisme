@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HotelsPage implements OnInit {
 
+  slideOpts = {
+    slidesPerView: 1.3,
+    initilSlide: 1,
+  };
+
   constructor() { }
 
   ngOnInit() {

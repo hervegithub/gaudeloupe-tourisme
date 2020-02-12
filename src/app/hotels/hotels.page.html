@@ -1,9 +1,49 @@
 <ion-header>
+
   <ion-toolbar>
-    <ion-title>hotels</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title text-center style="font-weight: bold;">hotels</ion-title>
+    <ion-icon slot="end" color="primary" name="call"></ion-icon>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <div>
+    <img src="../../assets/01-fort-royal.jpg">
+  </div>
+  <div style="margin-left: 10px">
+    <h3 style="font-weight: bold; font-family:'opensans-light-bold' ; font-weight: bold;">Fort royal hotel</h3>
+    <p>Chemin de Barbotteau 363, 97170 Petit-Bourg</p>
+    <p>Devirginato volares, tanquam barbatus luba.Fidess cadunt, tanquam noster gabalium.Fiscina, diatria, et lacta.Heu, nomen!</p>
+  </div>
+  <ion-item color="light" lines="none" style="margin-top: 20px;">
+    <p>Photos</p>
+  </ion-item>
+  <ion-item style="margin-top: 20px" lines="none">
+    <ion-slides  [options]="slideOpts">
+      <ion-slide >
+        <ion-card>
+          <img src="../../assets/01-fort-royal.jpg">
+        </ion-card>
+      </ion-slide>
+      <ion-slide>
+        <ion-card >
+          <img src="../../assets/01-fort-royal.jpg">
+        </ion-card>
+      </ion-slide>
+      <ion-slide>
+        <ion-card>
+          <img src="../../assets/01-fort-royal.jpg">
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
+  </ion-item>
+  <ion-item color="light" lines="none" style="margin-top: 20px;">
+    <p>Map</p>
+  </ion-item>
+  <ion-item style="padding: 5px" lines="none">
+    <img src="../../assets/map.png">
+  </ion-item>
 </ion-content>

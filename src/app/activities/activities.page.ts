@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-activities',
@@ -7,7 +8,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActivitiesPage implements OnInit {
 
-  constructor() { }
+  segment = 'hotels';
+
+  slideOpts = {
+    slidesPerView: 1.3,
+    initilSlide: 1,
+  };
+
+  constructor(
+    private router: Router
+  ) {
+
+   }
+
+  onCircuitListePage() {
+    this.router.navigateByUrl('circuit-list');
+  }
+
+  onMapPage() {
+    this.router.navigateByUrl('map');
+  }
+
+  onHotelsPage() {
+    this.router.navigateByUrl( 'hotels');
+  }
 
   ngOnInit() {
   }

@@ -1,0 +1,42 @@
+ion-searchbar{
+    box-shadow: none !important;
+    width: 330px;
+    z-index: unset !important;
+    margin-top: -20px;
+}
+
+.searchTitle{
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.ion-select-place{
+  width: 300px;
+  border: 1px solid gray;
+  font-size: 14px;
+  padding: 5px;
+  margin-top: 14px;
+  margin-left: -10px;
+}
+
+.ion-item-seach{
+  border-bottom: 1px solid grey;
+    width: 400px;
+    margin-bottom: 20px;
+}
+
+.category-group{
+  text-align: left;
+  font-weight: bold;
+  color: black;
+}
+
+.adresse{
+  text-align: left;
+  font-size: small;
+}
+
+a{
+  font-family: "opensans-light-bold";
+}

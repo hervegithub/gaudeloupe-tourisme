@@ -1,9 +1,171 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
     <ion-title>activities</ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-segment [(ngModel)]="segment">
+      <ion-segment-button value="hotels" text-lowercase>
+        <ion-label>hotels</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="restaurant" text-lowercase>
+        <ion-label>restaurant</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="loisir" text-lowercase>
+        <ion-label>loisir</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="jeux" text-lowercase>
+        <ion-label>jeux</ion-label>
+      </ion-segment-button>
+    </ion-segment>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content color="light">
 
+  <div  [ngSwitch]="segment">
+    <div *ngSwitchCase="'hotels'">
+     <ion-item lines="none">
+       <div>
+          <p class="searchTitle">Besoin d'un hotels <br>
+          Voici la liste de nos meilleurs hotels. </p>
+         <ion-input type="text" placeholder="taper la ville" class="ion-item-seach"></ion-input>
+       </div>
+     </ion-item>
+     <ion-item color="light" lines="none" style="margin-top: 20px;">
+       <p>Nos meilleurs propositions</p>
+       <a slot="end"> voir plus</a>
+     </ion-item>
+     <ion-item lines="none">
+      <ion-slides  [options]="slideOpts">
+        <ion-slide (click)="onHotelsPage()">
+          <ion-card>
+            <img src="../../assets/01-fort-royal.jpg">
+            <ion-card-content>
+              <p class="category-group">LANGLEY RESORT FORT ROYAL</p>
+              <p class="adresse">Petit Bas Vent F-97126 Deshaies, Guadeloupe</p>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+        <ion-slide>
+          <ion-card (click)="onHotelsPage()">
+            <img src="../../assets/01-fort-royal.jpg">
+            <ion-card-content>
+              <p class="category-group">LANGLEY RESORT FORT ROYAL</p>
+              <p class="adresse">Petit Bas Vent F-97126 Deshaies, Guadeloupe</p>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+        <ion-slide>
+          <ion-card (click)="onHotelsPage()">
+            <img src="../../assets/01-fort-royal.jpg">
+            <ion-card-content>
+              <p class="category-group">LANGLEY RESORT FORT ROYAL</p>
+              <p class="adresse">Petit Bas Vent F-97126 Deshaies, Guadeloupe</p>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+      </ion-slides>
+     </ion-item>
+    </div>
+
+    <div *ngSwitchCase="'restaurant'">
+      <ion-item lines="none">
+        <div>
+           <p class="searchTitle">Besoin d'un restaurant <br>
+           Voici la liste des meilleurs resataurants. </p>
+          <ion-input type="text" placeholder="taper la ville" class="ion-item-seach"></ion-input>
+        </div>
+      </ion-item>
+      <ion-item color="light" lines="none" style="margin-top: 30px;">
+        <p>Nos meilleurs propositions</p>
+        <a slot="end"> voir plus</a>
+      </ion-item>
+      <ion-item lines="none">
+       <ion-slides  [options]="slideOpts">
+         <ion-slide>
+           <ion-card (click)="onHotelsPage()">
+             <img src="../../assets/restaurant.jpg">
+             <ion-card-content>
+               <p class="category-group">La Rhumerie du Pirate</p>
+               <p class="adresse">Petit Bas Vent F-97126 Deshaies, Guadeloupe</p>
+             </ion-card-content>
+           </ion-card>
+         </ion-slide>
+         <ion-slide>
+           <ion-card (click)="onHotelsPage()">
+              <img src="../../assets/restaurant.jpg">
+             <ion-card-content>
+              <p class="category-group">La Rhumerie du Pirate</p>
+              <p class="adresse">Petit Bas Vent F-97126 Deshaies, Guadeloupe</p>
+             </ion-card-content>
+           </ion-card>
+         </ion-slide>
+         <ion-slide>
+           <ion-card (click)="onHotelsPage()">
+              <img src="../../assets/restaurant.jpg">
+             <ion-card-content>
+              <p class="category-group">La Rhumerie du Pirate</p>
+              <p class="adresse">Petit Bas Vent F-97126 Deshaies, Guadeloupe</p>
+             </ion-card-content>
+           </ion-card>
+         </ion-slide>
+       </ion-slides>
+      </ion-item>
+  
+    </div>
+
+    <div *ngSwitchCase="'loisir'">
+      <ion-item lines="none">
+        <div>
+           <p class="searchTitle" text-wrap>Besoin de distraction <br>
+           Voici la liste des lieu de distraction. Seul, avec des amis ou en famille </p>
+          <ion-input type="text" placeholder="taper la ville" class="ion-item-seach"></ion-input>
+        </div>
+      </ion-item>
+      <ion-item color="light" lines="none" style="margin-top: 30px;">
+        <p>Nos meilleurs propositions</p>
+        <a slot="end"> voir plus</a>
+      </ion-item>
+      <ion-item lines="none">
+       <ion-slides  [options]="slideOpts">
+         <ion-slide (click)="onHotelsPage()">
+           <ion-card>
+             <img src="../../assets/loisir.jpeg">
+             <ion-card-content>
+              <p class="category-group">A2L Parapente Guadeloupe</p>
+              <p class="adresse">Petit Bas Vent F-97126 Deshaies, Guadeloupe</p>
+             </ion-card-content>
+           </ion-card>
+         </ion-slide>
+         <ion-slide>
+           <ion-card (click)="onHotelsPage()">
+              <img src="../../assets/loisir.jpeg">
+             <ion-card-content>
+              <p class="category-group">A2L Parapente Guadeloupe</p>
+              <p class="adresse">Petit Bas Vent F-97126 Deshaies, Guadeloupe</p>
+             </ion-card-content>
+           </ion-card>
+         </ion-slide>
+         <ion-slide>
+           <ion-card (click)="onHotelsPage()">
+             <img src="../../assets/loisir.jpeg">
+             <ion-card-content>
+              <p class="category-group">A2L Parapente Guadeloupe</p>
+              <p class="adresse">Petit Bas Vent F-97126 Deshaies, Guadeloupe</p>
+             </ion-card-content>
+           </ion-card>
+         </ion-slide>
+       </ion-slides>
+      </ion-item>
+    
+    </div>
+
+    <div *ngSwitchCase="'Jeux'">
+
+    </div>
+
+  </div>
 </ion-content>

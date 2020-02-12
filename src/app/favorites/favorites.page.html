@@ -1,0 +1,106 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>favorites</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <ion-item lines="none">
+      <p slot="start" class="category-group">Circuits touristiques</p>
+      <a slot="end" (click)="OnCircuitListe()" >voir plus</a>
+    </ion-item>
+    <ion-slides  [options]="slideOpts">
+      <ion-slide>
+        <ion-card (click)="onMapPage() ">
+          <img src="../../assets/396_photo_1.jpg">
+          <ion-card-content>
+            <p class="category-group">Sud Basse-Terre</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-slide>
+      <ion-slide>
+        <ion-card (click)="onMapPage() ">
+          <img src="../../assets/396_photo_1.jpg">
+          <ion-card-content>
+            <p class="category-group">Sud Basse-Terre</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-slide>
+      <ion-slide>
+        <ion-card (click)="onMapPage() ">
+          <img src="../../assets/396_photo_1.jpg">
+          <ion-card-content>
+            <p class="category-group">Sud Basse-Terre</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+  <div>
+    <ion-item lines="none" color="light">
+      <p slot="start" class="category-group">Lieux touristiques</p>
+      <a slot="end" (click)="onPlacesPage()">voir plus</a>
+    </ion-item>
+    <ion-slides [options]="slideOpts">
+      <ion-slide >
+        <ion-card (click)="OnPlaceDescription( )" >
+          <img src="../../assets/945_photo_1.jpg">
+          <ion-card-content>
+            <p class="category-group">Mare de Diavet / Mare à Bwé</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-slide>
+      <ion-slide>
+        <ion-card (click)="OnPlaceDescription( )">
+          <img src="../../assets/945_photo_1.jpg">
+          <ion-card-content>
+            <p class="category-group">Mares</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-slide>
+      <ion-slide>
+        <ion-card (click)="OnPlaceDescription( )">
+          <img src="../../assets/945_photo_1.jpg">
+          <ion-card-content>
+            <p class="category-group">Tradition cannière</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+  <div>
+    <ion-item lines="none" color="light">
+      <p slot="start" class="category-group">Commune guadeloupe</p>
+      <a slot="end" (click)="onPlacesPage()">voir plus</a>
+    </ion-item>
+    <ion-slides  [options]="slideOpts">
+      <ion-slide >
+        <ion-card (click)="onMapPage() ">
+          <img src="../../assets/396_photo_1.jpg">
+          <ion-card-content>
+            <p class="category-group">Sud Basse-Terre</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-slide>
+      <ion-slide>
+        <ion-card (click)="onMapPage() ">
+          <img src="../../assets/396_photo_1.jpg">
+          <ion-card-content>
+            <p class="category-group">Sud Basse-Terre</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-slide>
+      <ion-slide>
+        <ion-card (click)="onMapPage() ">
+          <img src="../../assets/396_photo_1.jpg">
+          <ion-card-content>
+            <p class="category-group">Sud Basse-Terre</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>

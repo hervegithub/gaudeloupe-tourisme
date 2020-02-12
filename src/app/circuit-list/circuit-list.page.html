@@ -1,9 +1,104 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>circuit-list</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>circuit</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content color="light">
+  <ion-list style="background-color: #f4f5f8">
+    <ion-item-sliding class="circuit-item"   color="light">
+      <ion-item lines="none" (click)="onDescription()">
+        <div slot="start" style="padding: 0;">
+          <img src="../../assets/396_photo_1.jpg" height="70" width="70">
+        </div>
+        <div>
+          <h2 class="circuit-title">Sud basse terre</h2>
+          <p class="circuit-para">la cascade dans un magnifique écrin de verdure</p>
+          <hr>
+        </div>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option (click)="onDescription()">Map</ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+    <ion-item-sliding class="circuit-item" color="light">
+      <ion-item lines="none" (click)="onDescription()">
+        <div slot="start" style="padding: 0;">
+          <img src="../../assets/396_photo_1.jpg" height="70" width="70">
+        </div>
+        <div>
+          <h2 class="circuit-title">Côte-sous-le vent</h2>
+          <p class="circuit-para">la cascade dans un magnifique écrin de verdure</p>
+          <hr>
+        </div>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option (click)="onDescription()">Map</ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+    <ion-item-sliding class="circuit-item"   color="light">
+      <ion-item lines="none" (click)="onDescription()">
+        <div slot="start" style="padding: 0;">
+          <img src="../../assets/396_photo_1.jpg" height="70" width="70">
+        </div>
+        <div>
+          <h2 class="circuit-title">Nord basse terre</h2>
+          <p class="circuit-para">la cascade dans un magnifique écrin de verdure</p>
+          <hr>
+        </div>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option (click)="onDescription()">Map</ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+    <ion-item-sliding class="circuit-item"   color="light">
+      <ion-item lines="none" (click)="onDescription()">
+        <div slot="start" style="padding: 0;">
+          <img src="../../assets/396_photo_1.jpg" height="70" width="70">
+        </div>
+        <div>
+          <h2 class="circuit-title">Est grande terre</h2>
+          <p class="circuit-para">la cascade dans un magnifique écrin de verdure</p>
+          <hr>
+        </div>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option (click)="onDescription()">Lire</ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
 
+    <ion-item-sliding class="circuit-item"   color="light">
+      <ion-item lines="none" (click)="onDescription()">
+        <div slot="start" style="padding: 0;">
+          <img src="../../assets/396_photo_1.jpg" height="70" width="70">
+        </div>
+        <div>
+          <h2 class="circuit-title">Ouest grande-terre</h2>
+          <p class="circuit-para">la cascade dans un magnifique écrin de verdure</p>
+          <hr>
+        </div>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option (click)="onDescription()">Map</ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+    <ion-item-sliding class="circuit-item"   color="light">
+      <ion-item lines="none" (click)="onDescription()">
+        <div slot="start" style="padding: 0;">
+          <img src="../../assets/396_photo_1.jpg" height="70" width="70">
+        </div>
+        <div>
+          <h2 class="circuit-title">La saintes</h2>
+          <p class="circuit-para">la cascade dans un magnifique écrin de verdure</p>
+          <hr>
+        </div>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option (click)="onDescription()">Map</ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
 </ion-content>
