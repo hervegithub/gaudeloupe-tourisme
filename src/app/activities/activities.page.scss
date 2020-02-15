@@ -6,9 +6,10 @@ ion-searchbar{
 }
 
 .searchTitle{
-    font-size: 15px;
-    font-weight: bold;
-    margin-bottom: 2px;
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 21px;
+  margin-top: 22px;
 }
 
 .ion-select-place{
@@ -39,4 +40,9 @@ ion-searchbar{
 
 a{
   font-family: "opensans-light-bold";
+}
+
+ion-card{
+  height: 300px;
+  width: 100%;
 }

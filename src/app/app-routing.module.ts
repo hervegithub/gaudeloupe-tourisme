@@ -29,6 +29,10 @@ const routes: Routes = [
   {
     path: 'hotels',
     loadChildren: () => import('./hotels/hotels.module').then( m => m.HotelsPageModule)
+  },
+  {
+    path: 'circuit-game',
+    loadChildren: () => import('./circuit-game/circuit-game.module').then( m => m.CircuitGamePageModule)
   }
 
 ];

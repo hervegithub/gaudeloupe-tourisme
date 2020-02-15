@@ -44,6 +44,15 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'cap',
+        children : [
+          {
+            path: "",
+            loadChildren: () => import('../cap/cap.module').then( m => m.CapPageModule)
+          }
+        ]
+      },
+      {
         path: '',
         redirectTo: '/tabs/favorites',
         pathMatch: 'full'

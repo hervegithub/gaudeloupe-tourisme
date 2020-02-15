@@ -1,0 +1,51 @@
+<ion-header>
+
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title text-center>CAP</ion-title>
+    <ion-icon scr="../../assets/ellipsis-vertical.svg" slot="end"></ion-icon>
+    <!--<ion-button [color]="btnColor" slot="end"
+  (click)="onChangeColor()" shape="round">{{btnText}}</ion-button>-->
+  </ion-toolbar>
+
+  <ion-toolbar>
+    <label position="stacked" id="progression">Progression</label>
+    <ion-progress-bar [value]="progression"></ion-progress-bar>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content color="light">
+  <ion-item lines="none" style="padding-top: 20px;">
+    <img src="../../assets/restaurant.jpg" height="80" width="80" slot="start">
+    <div>
+      <p>Parcours no1</p>
+      <h2>Etape {{etape + 1}}</h2>
+    </div>
+  </ion-item>
+  <ion-item class="ion-padding" lines="none">
+  <p>{{etapes[etape].description}}</p>
+  </ion-item>
+  <ion-list>
+    <ion-list-header>
+      {{etapes[etape].question}}
+    </ion-list-header>
+    <ion-item>
+      <label position="stacked">Reponse</label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col siz="6" text-center><ion-button expend="block" (click)="onPreviewStep()">Retour</ion-button></ion-col>
+        <ion-col siz="6" text-center><ion-button expend="block" (click)="onNextStep()">Suivant</ion-button></ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>

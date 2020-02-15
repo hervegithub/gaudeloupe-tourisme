@@ -17,7 +17,7 @@
         <ion-label>loisir</ion-label>
       </ion-segment-button>
       <ion-segment-button value="jeux" text-lowercase>
-        <ion-label>jeux</ion-label>
+        <ion-label>pharmacies</ion-label>
       </ion-segment-button>
     </ion-segment>
   </ion-toolbar>
@@ -34,11 +34,11 @@
          <ion-input type="text" placeholder="taper la ville" class="ion-item-seach"></ion-input>
        </div>
      </ion-item>
-     <ion-item color="light" lines="none" style="margin-top: 20px;">
+     <ion-item color="light" lines="none" style="margin-top: 15%;">
        <p>Nos meilleurs propositions</p>
        <a slot="end"> voir plus</a>
      </ion-item>
-     <ion-item lines="none">
+     <ion-item lines="none" >
       <ion-slides  [options]="slideOpts">
         <ion-slide (click)="onHotelsPage()">
           <ion-card>

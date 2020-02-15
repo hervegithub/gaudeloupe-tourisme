@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>cap</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" color="light">
+    <ion-item lines="none" *ngFor ="let parcour of parcours" class="items"
+    (click)="onCircuitGame(parcour.id)">
+      <div>
+        <p class="nom">{{parcour.name}}</p>
+        <p class="description">{{parcour.description}}</p>
+        <p class="main">{{parcour.main}}</p>
+      </div>
+      <ion-icon src="../../assets/checkmark-circle-sharp.svg" color="primary" slot="end" *ngIf="parcour.isPlayed"></ion-icon>
+    </ion-item>
+</ion-content>
