@@ -1,5 +1,7 @@
 {
   "name": "guadeloupe-tourisme",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
